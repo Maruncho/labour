@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;izpit&apos; to &apos;date&apos;&#x0D;&#x0A;- Original project: &apos;Date&apos;&#x0D;&#x0A;- Original element: &apos;Date/src/izpit&apos;&#x0D;&#x0A;- Renamed element: &apos;Date/src/date&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;izpit&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;izpit" name="date" qualified="false" references="true" stamp="1639172766488" textual="false" version="1.0"/>
+</session>

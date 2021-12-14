@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "51a0d985-4783-4ae3-8482-1a8d48ef1f2e": {
+      "ProjectGuid": "51a0d985-4783-4ae3-8482-1a8d48ef1f2e",
+      "DisplayName": "Christmas Sock",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

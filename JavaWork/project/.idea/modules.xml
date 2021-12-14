@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Date/Date.iml" filepath="$PROJECT_DIR$/Date/Date.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Disc/Disc.iml" filepath="$PROJECT_DIR$/Disc/Disc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kitchen/Kitchen.iml" filepath="$PROJECT_DIR$/Kitchen/Kitchen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigNumbers/bigNumbers.iml" filepath="$PROJECT_DIR$/bigNumbers/bigNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/competition/competition.iml" filepath="$PROJECT_DIR$/competition/competition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/star/star.iml" filepath="$PROJECT_DIR$/star/star.iml" />
+    </modules>
+  </component>
+</project>

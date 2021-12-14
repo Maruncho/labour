@@ -1,0 +1,33 @@
+
+public class Stock {
+	protected String n;
+	protected double p;
+	
+	Stock(String name, double price) throws Exception {
+		name(name);
+		price(price);
+	}
+	
+	public String name() {
+		return n;
+	}
+	public void name(String name) throws Exception {
+		if(name.isBlank() || name.length() > 32)
+			throw new Exception("Invalid name");
+		n = name;
+	}
+	
+	public double price() {
+		return p;
+	}
+	public void price(double price) throws Exception {
+		if(price < 0)
+			throw new Exception("Invalid Price");
+		p = price;
+	}
+	
+	public String toString() {
+	    return name+", "+value;
+	}
+
+}

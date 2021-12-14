@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "046e3726-08a2-4872-bbef-394520ecf4eb": {
+      "ProjectGuid": "046e3726-08a2-4872-bbef-394520ecf4eb",
+      "DisplayName": "ConsoleApplication1",
+      "ColorIndex": 0
+    },
+    "ec1ba065-1273-4b0e-af96-5a49793f9704": {
+      "ProjectGuid": "ec1ba065-1273-4b0e-af96-5a49793f9704",
+      "DisplayName": "csVersion",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

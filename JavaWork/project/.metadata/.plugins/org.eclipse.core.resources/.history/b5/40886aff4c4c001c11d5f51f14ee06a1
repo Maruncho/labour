@@ -1,0 +1,34 @@
+
+public class Appliance extends Stock {
+	private double u;
+	private double w;
+	
+	Appliance(String name, double price, double force, double power) throws Exception {
+		super(name, price);
+		force(force);
+		power(power);
+	}
+	
+	public double force() {
+		return u;
+	}
+	public void force(double nu) throws Exception {
+		if(nu<0)
+			throw new Exception("Invalid Volts");
+		u = nu;
+	}
+	
+	public double power() {
+		return w;
+	}
+	public void power(double nw) throws Exception {
+		if(nw<0)
+			throw new Exception("Invalid Watts");
+		w = nw;
+	
+	}
+	
+	public double Tax(double eBill) {
+		return eBill*(w/1000)*24*40/100;
+	}
+}

@@ -1,0 +1,78 @@
+package competition;
+
+import java.util.Scanner;
+import java.io.*;
+
+public class Main {
+	public static void main(String[] args) throws IOException{
+		
+		File myFile = new File("data1.txt");
+		Scanner in = new Scanner(myFile);
+		
+		//extract metadata (first line)
+		String temp = in.nextLine();
+		String[] line1 = temp.split(" ");
+		int judges = Integer.parseInt(line1[0]);
+		int contestants = Integer.parseInt(line1[1]);
+		
+		//-----------------------------------------------------
+		
+		//create arrays for the scores
+		String[][] scoresString = new String[judges][contestants];
+		int[][] scores = new int[judges][contestants];
+		
+		//create arrays for the scores
+		String[] coeficientsString = new String[contestants];
+		double[] coeficients = new double[contestants];
+		
+		//create arrays for the arithmetics
+		double[] scoresSum = new double[contestants];
+		double[] finalScores = new double[contestants];
+		
+		//-----------------------------------------------------
+		
+		//get each line and then separate the elements 
+		for(int i = 0; i < judges; i++)
+			scoresString[i] = in.nextLine().split("\t");
+		
+		//convert the data to int
+		for(int i = 0; i < judges; i++)
+			for(int j = 0; j < contestants; j++) {
+				scores[i][j] = Integer.parseInt(scoresString[i][j]);
+			}
+		
+		//------------------------------------------------------
+		
+		//separate the elements in the line
+		//replace ',' with '.' (floating point)
+		coeficientsString = in.nextLine().replace(",",".").split("\t");
+		
+		//convert the data to double
+		for(int i = 0; i < coeficientsString.length; i++)
+			coeficients[i] = Double.parseDouble(coeficientsString[i]);
+		
+		//------------------------------------------------------
+		
+		//calculate final scores for each contestant
+		for(int i = 0; i < scores[0].length; i++) {
+			double sum = 0;
+			for(int j = 0; j < scores.length; j++)
+				sum+=scores[j][i];
+			scoresSum[i] = sum; //
+			finalScores[i] = scoresSum[i] * coeficients[i];
+		}
+		
+		//------------------------------------------------------
+		
+		FileWriter fw = new FileWriter("klasirane.txt");
+		PrintWriter pw = new PrintWriter(fw);
+		
+		for(int i = 0; i < finalScores.length; i++)
+			pw.printf("%.2f\t",finalScores[i]);
+		pw.println();
+		
+		pw.close();
+		fw.close();
+		in.close();
+	}
+}

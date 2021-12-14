@@ -1,0 +1,45 @@
+
+public class Appliance extends Stock {
+	private double u;
+	private double w;
+	private final static double BILL_PRICE = 0.20;
+	
+	Appliance(String name, double price, double force, double power) throws Exception {
+		super(name, price);
+		force(force);
+		power(power);
+	}
+	
+	public double force() {
+		return u;
+	}
+	public void force(double nu) throws Exception {
+		if(nu<0)
+			throw new Exception("Invalid Volts");
+		u = nu;
+	}
+	
+	public double power() {
+		return w;
+	}
+	public void power(double nw) throws Exception {
+		if(nw<0)
+			throw new Exception("Invalid Watts");
+		w = nw;
+	
+	}
+	
+	public double Tax(double eBill) {
+		return eBill*(w/1000)*24*40/100;
+	}
+	public double Tax() {
+		return BILL_PRICE*(w/1000)*24*40/100;
+	}
+	
+	public String toString() {
+		return n+"\t"+Double.toString(p)+"lv.\t"+
+				Double.toString(u)+"V\t"+
+				Double.toString(w)+"W\t"+
+				Double.toString(Tax());
+	}
+}

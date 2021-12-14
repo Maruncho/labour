@@ -1,0 +1,17 @@
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		Appliance[] arr = {
+				new Appliance("Кафе машина",140.0,1000,220),
+				new Appliance("Телевизор",1400.5,200,220),
+				new Appliance("Пералня  ",1420.0,1100,220),
+				new Appliance("Хладилник",780.0,1000,220)
+		};
+		
+		for(var app : arr) {
+			System.out.println(app.toString());
+		}
+	}
+
+}

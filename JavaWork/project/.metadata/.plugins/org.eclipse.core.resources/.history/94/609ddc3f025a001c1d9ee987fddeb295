@@ -1,0 +1,24 @@
+package izpit;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			
+			Date date = new Date(24,12,2004);
+			
+			System.out.println(date.daysBetween(new Date(5,11,2021)));
+			
+			for(int i = 1; i <= 365; i++) {
+				System.out.println(date.toString());
+				date = date.nextDate();
+			}	
+			
+		} catch (Exception e) {
+			System.out.println("exception: "+e.getMessage());
+		}
+		
+		
+	}
+
+}

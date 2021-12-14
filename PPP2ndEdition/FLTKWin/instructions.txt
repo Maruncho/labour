@@ -1,0 +1,31 @@
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\lib\x86
+
+Place all the .lib files here (7 in total) 
+
+-----
+
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include
+
+Place the 'FL' folder here (not the content, but the folder itself)
+
+-----------------------------------
+
+Run projects in x86
+
+------------------------------------
+
+If a project cannot run, make sure:
+
+Project -> Properties -> Linker -> Input -> 
+
+Additional Dependencies:
+fltkd.lib
+wsock32.lib
+comctl32.lib
+fltkjpegd.lib
+fltkimagesd.lib
+
+Ignore Specific Default Libraries:
+libcd.lib
+
+-------------------------------------
